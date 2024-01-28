@@ -4,61 +4,9 @@ import { faCalendarDays, faGlobe } from "@fortawesome/free-solid-svg-icons";
 import "./eventTitle.css"; // Import the stylesheet
 
 export default function EventTitle() {
-  // useEffect(() => {
-  //   const canvas = document.querySelector(".waves");
-  //   const ctx = canvas.getContext("2d");
-
-  //   const wave = {
-  //     yOffset: 0,
-  //     amplitude: 30,
-  //     frequency: 0.02,
-  //     speed: 0.2,
-  //     color: "rgba(217, 14, 144, 0.5)",
-  //   };
-
-  //   function drawWaves() {
-  //     ctx.clearRect(0, 0, canvas.width, canvas.height);
-
-  //     ctx.fillStyle = wave.color;
-
-  //     ctx.beginPath();
-  //     for (let j = 0; j < 2; j++) {
-  //       ctx.moveTo(0, canvas.height / 2);
-
-  //       for (let i = 0; i < canvas.width; i++) {
-  //         ctx.lineTo(
-  //           i,
-  //           canvas.height / 2 +
-  //             Math.sin(
-  //               (i * wave.frequency + wave.yOffset + j * Math.PI) * wave.speed
-  //             ) *
-  //               wave.amplitude
-  //         );
-  //       }
-  //     }
-
-  //     ctx.lineTo(canvas.width, canvas.height);
-  //     ctx.lineTo(0, canvas.height);
-  //     ctx.closePath();
-  //     ctx.fill();
-
-  //     wave.yOffset += wave.speed;
-  //     requestAnimationFrame(drawWaves);
-  //   }
-
-  //   drawWaves();
-  // }, []); // Run once on component mount
-
   return (
     <section className="event-title-section">
       <div className="containerr">
-        {/* <canvas
-          className="waves"
-          data-speed="5"
-          data-wave-width="150%"
-          data-animation="SineInOut"
-          style={{ width: "100%", height: "100%" }}
-        ></canvas> */}
         <div className="event-title-container">
           <svg
             className="badge-promo-icon"

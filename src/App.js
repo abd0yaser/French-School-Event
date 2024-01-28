@@ -1,11 +1,16 @@
 import React from "react";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Routes,
+  HashRouter,
+  Route,
+} from "react-router-dom";
 import BookForm from "./components/BookForm/BookForm";
 import Main from "./components/Main";
 
 function App() {
   return (
-    <Router>
+    <HashRouter>
       <div className="App">
         <Routes>
           <Route path="/" element={<Main />} />
@@ -13,7 +18,7 @@ function App() {
           <Route path="/BookForm" element={<BookForm />} />
         </Routes>
       </div>
-    </Router>
+    </HashRouter>
   );
 }
 
