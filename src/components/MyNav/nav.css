@@ -1,0 +1,60 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-logo img {
+  max-height: 40px;
+}
+
+.navbar-buttons {
+  display: flex;
+  align-items: center;
+}
+
+.buy-now-button {
+  position: relative;
+  text-decoration: none;
+  color: #fff;
+  background-color: #d90e90;
+  padding: 10px 20px;
+  border-radius: 5px;
+  margin-right: 20px;
+  font-weight: bold;
+  overflow: hidden;
+  border: none;
+}
+
+.buy-now-button .button-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  z-index: -1;
+  border-top-width: 60.5px;
+  border-left-width: 159.5px;
+}
+
+.countdown {
+  display: flex;
+  align-items: center;
+}
+
+.countdown-item {
+  margin-right: 10px;
+}
+
+.countdown-value {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.countdown-label {
+  font-size: 12px;
+}

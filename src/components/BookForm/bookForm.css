@@ -1,0 +1,77 @@
+.book-form-container {
+  max-width: 400px;
+  margin: auto;
+  margin-top: 50px;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+}
+
+h2 {
+  text-align: center;
+  color: #333;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  margin-bottom: 10px;
+}
+
+input {
+  width: 100%;
+  padding: 8px;
+  margin-top: 5px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+p {
+  margin-bottom: 15px;
+}
+
+button {
+  background-color: #d90e90;
+  color: #fff;
+  padding: 8px; /* Adjust padding */
+  border: none;
+  border-radius: 8px; /* Adjust border-radius */
+  cursor: pointer;
+  font-size: 14px;
+}
+
+button:hover {
+  background-color: #a50a6e;
+}
+.buy-button {
+  margin-right: 70px;
+  margin-left: 70px;
+}
+
+.ticket-counter-label {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.ticket-counter {
+  display: flex;
+  align-items: center;
+}
+
+.ticket-counter button {
+  margin: 0 5px;
+}
+.counter-button {
+  width: 34px;
+}

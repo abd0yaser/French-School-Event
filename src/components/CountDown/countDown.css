@@ -1,0 +1,75 @@
+.countdown-container {
+  position: relative;
+  overflow: hidden;
+  background-color: rgba(217, 14, 144, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.parallax {
+  position: absolute;
+  z-index: -1;
+}
+
+.parallax img {
+  display: block;
+}
+
+.countdown-content {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  padding: 50px;
+  color: #fff;
+  margin: 100px 200px;
+}
+
+.data {
+  display: flex;
+  justify-content: center;
+}
+
+.countdown-item {
+  margin: 0 10px;
+  border: #fff 4px solid;
+  border-radius: 10px;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  flex-direction: column;
+}
+
+.countdown-value,
+.countdown-title {
+  color: #fff;
+  font-size: 24px;
+  margin: 10px;
+  display: flex;
+}
+
+.TimeRunningOut {
+  font-family: "Barlow Condensed", "Segoe UI", "Helvetica Neue", Arial,
+    sans-serif;
+  font-size: 16px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}
+
+.BookYourTicket {
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-weight: 800px;
+  font-size: 42px;
+  margin-top: 10px;
+}
+.paragraph {
+  margin: 30px;
+  font-size: 20px; /* Increase the font size */
+  line-height: 1.4; /* Set the line height to control the space between lines */
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2; /* Limit the paragraph to two lines */
+  -webkit-box-orient: vertical;
+}
