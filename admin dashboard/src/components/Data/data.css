@@ -1,0 +1,68 @@
+.container {
+  max-width: 400px;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  color: #26264b;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: beige;
+  margin-top: 150px;
+}
+
+.scan {
+  color: #fff;
+  padding: 10px;
+  text-align: center;
+}
+
+.information {
+  display: flex;
+  flex-direction: column;
+  font-size: 18px;
+  margin-top: 20px;
+  align-items: center;
+}
+
+.ticket-section {
+  display: flex;
+  align-items: center;
+  margin: 20px 0;
+  flex-direction: column;
+}
+
+.ticket-de {
+  display: flex;
+  margin-bottom: 10px;
+}
+
+button {
+  background-color: #d90e90;
+  color: #fff;
+  border: none;
+  width: 30px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.Submit {
+  background-color: #d90e90;
+  color: #fff;
+  border: none;
+  width: 200px;
+  border-radius: 10px;
+  cursor: pointer;
+  margin-top: auto;
+}
+
+button:hover {
+  background-color: #ae27a7;
+}
+
+.ticket-number {
+  margin: 0 10px;
+  font-size: 18px;
+}

@@ -5,9 +5,6 @@
 /.pnp
 .pnp.js
 
-admin dashboard/node_modules
-admin dashboard/build
-
 # testing
 /coverage
 
