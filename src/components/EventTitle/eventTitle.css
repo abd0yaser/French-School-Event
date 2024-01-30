@@ -7,23 +7,30 @@
   color: #ffffff;
 
   display: flex;
-  justify-content: center; /* Center content horizontally */
-  align-items: center; /* Center content vertically */
+  justify-content: center;
+  /* Center content horizontally */
+  align-items: center;
+  /* Center content vertically */
   z-index: -1;
 }
+
 .containerr {
   background-color: rgba(47, 26, 97, 0.7);
   width: 100%;
   display: flex;
-  justify-content: center; /* Center content horizontally */
+  justify-content: center;
+  /* Center content horizontally */
   align-items: center;
 }
+
 .event-title-container {
   text-align: center;
   padding: 50px 0;
   position: relative;
-  max-width: 800px; /* Adjust the max-width as needed */
-  width: 100%; /* Take full width */
+  max-width: 800px;
+  /* Adjust the max-width as needed */
+  width: 100%;
+  /* Take full width */
 }
 
 .Hurry {
@@ -32,9 +39,6 @@
   margin-bottom: 20px;
 }
 
-svg {
-  margin-bottom: 30px;
-}
 .BigEvent {
   font-size: 48px;
   font-weight: bold;
@@ -51,6 +55,7 @@ svg {
   font-size: 24px;
   margin-right: 5px;
 }
+
 .Data {
   margin-left: 20px;
 }

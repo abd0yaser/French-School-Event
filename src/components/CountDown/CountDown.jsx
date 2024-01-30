@@ -3,9 +3,9 @@ import "./countDown.css";
 
 export default function CountDown() {
   const [countdown, setCountdown] = useState({
-    Jours: 120,
-    heures: 14,
-    minutes: 8,
+    Jours: 32,
+    heures: 20,
+    minutes: 51,
     seconds: 3,
   });
 
@@ -52,15 +52,10 @@ export default function CountDown() {
 
   return (
     <div className="countdown-container ">
-      <div className="parallax">
-        <img
-          src="https://voelas.dan-fisher.dev/images/bg-parallax-01-1894x778.jpg"
-          alt=""
-        />
-      </div>
+      <div className="backgroundColor"></div>
       <div className="countdown-content">
         <div className="TimeRunningOut">Le temps passe</div>
-        <div className="BookYourTicket">Réservez votre billet .</div>
+        <div className="BookYourTicket">Réservez votre billet</div>
         <div className="paragraph">
           Malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat
           vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet

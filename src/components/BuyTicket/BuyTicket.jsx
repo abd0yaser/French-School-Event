@@ -24,18 +24,14 @@ export default function BuyTicket() {
 
           <div className="DateTime">
             <div className="location">
-              <div>
-                <FontAwesomeIcon icon={faGlobe} />
-              </div>
+              <FontAwesomeIcon icon={faGlobe} />
               <div className="Data-content">
                 <div> Où</div>
                 <div>Lycée Français du Caire </div>
               </div>
             </div>
             <div className="date">
-              <div>
-                <FontAwesomeIcon icon={faCalendarDays} />
-              </div>
+              <FontAwesomeIcon icon={faCalendarDays} />
               <div className="Data-content">
                 <div> Quand</div>
                 <div>Le jeudi 27 Juin 2024 </div>

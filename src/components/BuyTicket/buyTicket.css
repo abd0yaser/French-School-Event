@@ -112,6 +112,7 @@
   border-radius: 10px;
   width: 230px;
   margin-top: auto;
+  margin-bottom: 20px;
 }
 .left {
   flex: 1;

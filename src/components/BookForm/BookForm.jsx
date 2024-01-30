@@ -1,16 +1,18 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import "./bookForm.css";
 import Spinner from "react-bootstrap/Spinner";
+import "bootstrap/dist/css/bootstrap.min.css";
+import "./bookForm.css";
 
 const TicketForm = () => {
   const navigate = useNavigate();
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
+  const [phoneNumber, setPhoneNumber] = useState("");
   const [ticketCount, setTicketCount] = useState(1);
   const [isLoading, setIsLoading] = useState(false);
 
-  const ticketPrice = 1600;
+  const ticketPrice = 5;
 
   const calculateTotalPrice = () => {
     return ticketCount * ticketPrice;
@@ -25,6 +27,29 @@ const TicketForm = () => {
   };
 
   const handleBuyClick = () => {
+    if (
+      name.trim() === "" ||
+      phoneNumber.trim() === "" ||
+      email.trim() === ""
+    ) {
+      alert("Remplissez tous les champs s'il vous plaît");
+      return;
+    }
+
+    if (!/^(010|011|015|012)\d{8}$/.test(phoneNumber)) {
+      alert(
+        "Numéro de portable invalide. Veuillez entrer un numéro de portable valide."
+      );
+      return;
+    }
+
+    if (!/\S+@\S+\.\S+/.test(email)) {
+      alert(
+        "Adresse e-mail invalide. Veuillez entrer une adresse e-mail valide."
+      );
+      return;
+    }
+
     setIsLoading(true);
 
     const totalPrice = calculateTotalPrice();
@@ -33,8 +58,11 @@ const TicketForm = () => {
     const requestBody = {
       ConnectionStringName: "FrenshSchool",
       StoredProcedureName: "Unauthorized.InsertTransaction",
-
-      SpParams: { amount: calculateTotalPrice(), name: name, mobile: "" },
+      SpParams: {
+        amount: calculateTotalPrice(),
+        name: name,
+        mobile: phoneNumber,
+      },
     };
 
     fetch(apiEndpoint, {
@@ -49,7 +77,7 @@ const TicketForm = () => {
         setIsLoading(false);
 
         let orderID = data.table1[0].OrderID;
-        window.location.href = `https://pay.advansystelecom.com/TMEPayments/RedirectTo?serviceID=15&serviceGatewayId=0&merchantRefNo=${orderID}&inquireInfo=${orderID}&amount=${totalPrice}`;
+        window.location.href = `https://pay.advansystelecom.com/TMEPayments/RedirectTo?serviceID=15&serviceGatewayId=0&merchantRefNo=${orderID}&inquireInfo=${orderID}&amount=${totalPrice}&mobileNumber=${phoneNumber}`;
       })
       .catch(() => {
         setIsLoading(false);
@@ -71,12 +99,21 @@ const TicketForm = () => {
         </label>
 
         <label className="form-label">
-          Email:
+          E-mail:
           <input
             className="form-input"
             type="email"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
+          />
+        </label>
+
+        <label className="form-label">
+          Numéro de portable:
+          <input
+            className="form-input"
+            value={phoneNumber}
+            onChange={(e) => setPhoneNumber(e.target.value)}
           />
         </label>
 
@@ -102,11 +139,8 @@ const TicketForm = () => {
         </label>
 
         <p className="total-price">Prix total: {calculateTotalPrice()} LE</p>
-        {/* <button className="buy-button" type="button" onClick={handleBuyClick}>
-          Réserver maintenant
-        </button> */}
         <button
-          type="submit"
+          type="button"
           className="buy-button"
           onClick={handleBuyClick}
           disabled={isLoading}
